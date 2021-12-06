@@ -1,0 +1,50 @@
+﻿using System;
+
+namespace xyz
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            uint M;
+            while (true)
+            {
+                Console.WriteLine("wpisz liczbe");
+                uint liczba = Convert.ToUInt32(Console.ReadLine());
+                Console.WriteLine("1. kwadraty");
+                Console.WriteLine("2. sześciany");
+                Console.WriteLine("3. pierwiastki");
+                Console.WriteLine("0. koniec");
+
+                M = Convert.ToUInt32(Console.ReadLine());
+
+                if (M == 1)
+                {
+                    for (int i = 1; i <= liczba; i++)
+                    {
+                        Console.WriteLine("kwadrat " + i + " = " + (i * i));
+                    }
+                }
+                else if (M == 2)
+                {
+                    for (int i = 1; i <= liczba; i++)
+                    {
+                        Console.WriteLine("sześcian " + i + " = " + (i * i * i));
+                    }
+                }
+                else if (M == 3)
+                {
+                    for (int i = 1; i <= liczba; i++)
+                    {
+                        Console.WriteLine("pierwiastek " + i + " = " + (Math.Sqrt(i)));
+                    }
+                }
+                else if (M == 0)
+                {
+                    continue;
+                }
+
+            }
+        }
+    }
+}
